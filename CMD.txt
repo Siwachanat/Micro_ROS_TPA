@@ -1,0 +1,2 @@
+sh ~/start_agent_computer.sh    "start"
+ros2 run yahboomcar_ctrl yahboom_keyboard     "teleop keyboard"

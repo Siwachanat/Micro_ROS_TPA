@@ -6,7 +6,7 @@ CAM DETECT
 >>> sh ~/start_agent_computer.sh      "bring up"
 >>> sh start_Camera_computer.sh      "Start Cam"
 >>> ros2 run yahboom_esp32_mediapipe 02_PoseDetector      "run OpenCV"
->>> cd Micro_ROS_TPA      "cd to ws"
+>>> cd Micro_ROS_TPA/src      "cd to ws"
 >>> python3 test_drop.py      "Run Py"
 
 NAVI

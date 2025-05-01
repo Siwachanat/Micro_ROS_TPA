@@ -1,25 +1,28 @@
 TELEOP
->>> sh ~/start_agent_computer.sh      "bring up"
->>> ros2 run yahboomcar_ctrl yahboom_keyboard      "teleop keyboard"
+sh ~/start_agent_computer.sh      "bring up"
+ros2 run yahboomcar_ctrl yahboom_keyboard      "teleop keyboard"
 
 CAM DETECT
->>> sh ~/start_agent_computer.sh      "bring up"
->>> sh start_Camera_computer.sh      "Start Cam"
->>> ros2 run yahboom_esp32_mediapipe 02_PoseDetector      "run OpenCV"
->>> cd Micro_ROS_TPA/src      "cd to ws"
->>> python3 test_drop.py      "Run Py"
+sh ~/start_agent_computer.sh      "bring up"
+sh start_Camera_computer.sh      "Start Cam"
+ros2 run yahboom_esp32_mediapipe 02_PoseDetector      "run OpenCV"
+cd Micro_ROS_TPA/src      "cd to ws"
+python3 test_drop.py      "Run Py"
 
 NAVI
->>> sh start_agent_computer.sh
->>> ros2 launch yahboomcar_bringup yahboomcar_bringup_launch.py      "bring up"
->>> ros2 run yahboomcar_ctrl yahboom_keyboard      "teleop"
->>> ros2 launch yahboomcar_nav display_launch.py      "Rviz"
->>> ros2 launch yahboomcar_nav map_gmapping_launch.py      "Navi"
+sh start_agent_computer.sh
+ros2 launch yahboomcar_bringup yahboomcar_bringup_launch.py      "bring up"
+ros2 run yahboomcar_ctrl yahboom_keyboard      "teleop"
+ros2 launch yahboomcar_nav display_launch.py      "Rviz"
+ros2 launch yahboomcar_nav map_gmapping_launch.py      "Navi"
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
->>> ros2 launch yahboomcar_nav save_map_launch.py      "save map"
+ros2 launch yahboomcar_nav save_map_launch.py      "save map"
 
 NAVIGATION
 ros2 launch yahboomcar_nav navigation_dwb_launch.py      "Navigation.launch"
 
 COSTMAP
 ros2 run rqt_reconfigure rqt_reconfigure      "edit param"
+
+POSE
+ros2 topic echo /amcl_pose "xyo"
